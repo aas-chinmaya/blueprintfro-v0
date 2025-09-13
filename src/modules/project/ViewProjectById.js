@@ -27,7 +27,7 @@ import { Briefcase, TrendingUp, FileStack, BugIcon, CheckCircle, Pencil } from "
 import { useRouter, useSearchParams } from "next/navigation";
 // import ViewTeamByProjectId from "@/modules/team/viewTeamByProjectId";
 // import CreateTeamForm from "@/modules/team/createTeam";
-import AllTaskListByProjectId from "@/modules/task/AllTaskListByProjectId";
+import AllTaskListByProjectId from "@/modules/Tasks/task/AllTaskListByProjectId";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { LuFolderClock } from "react-icons/lu";

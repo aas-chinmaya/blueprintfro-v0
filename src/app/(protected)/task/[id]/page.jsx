@@ -1,4 +1,4 @@
-import ViewTask from "@/modules/task/ViewTask";
+import ViewTask from "@/modules/Tasks/task/ViewTask";
 
 export default function Page() {
   return (

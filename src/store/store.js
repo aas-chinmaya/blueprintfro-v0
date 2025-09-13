@@ -15,6 +15,8 @@ import dashReducer from '@/features/dashboard/dashSlice';
 import projectReducer from '@/features/projectSlice';
 import teamReducer from '@/features/teamSlice';
 import taskReducer from '@/features/taskSlice';
+import subTaskReducer from '@/features/subTaskSlice';
+
 import bugReducer from '@/features/bugSlice';
 
 // module reducer
@@ -69,6 +71,7 @@ const store = configureStore({
   client:clientReducer,
   project:projectReducer,
   task:taskReducer,
+  subTask:subTaskReducer,
   team: teamReducer,
   bugs: bugReducer,
   cause: causeReducer,
