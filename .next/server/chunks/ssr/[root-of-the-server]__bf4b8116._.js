@@ -2239,9 +2239,9 @@ const updateTask = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modu
         return rejectWithValue(error.response?.data?.message || error.message || 'Failed to update task');
     }
 });
-const updateTaskStatus = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])('task/updateTaskStatus', async ({ task_id, status, delayReason }, { rejectWithValue })=>{
+const updateTaskStatus = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])('task/updateTaskStatus', async ({ taskId, status, delayReason }, { rejectWithValue })=>{
     try {
-        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].put(`/task/update/${task_id}`, {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].put(`/task/update/${taskId}`, {
             status,
             delayReason
         }, {
@@ -2640,7 +2640,8 @@ __turbopack_context__.s({
     "deleteSubTask": (()=>deleteSubTask),
     "fetchSubTasksByTaskId": (()=>fetchSubTasksByTaskId),
     "getSubTaskById": (()=>getSubTaskById),
-    "updateSubTask": (()=>updateSubTask)
+    "updateSubTask": (()=>updateSubTask),
+    "updateSubTaskStatus": (()=>updateSubTaskStatus)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs [app-ssr] (ecmascript) <locals>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/axios.js [app-ssr] (ecmascript)");
@@ -2648,10 +2649,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$
 ;
 const fetchSubTasksByTaskId = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("subTask/fetchByTaskId", async (taskId, { rejectWithValue })=>{
     try {
-        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].get(`/subtask/task/${taskId}`);
+        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].get(`/subtask/getallsubtasks/${taskId}`);
         return {
             taskId,
-            subtasks: res.data
+            subtasks: res.data.subtasks
         };
     } catch (err) {
         return rejectWithValue(err.response?.data || err.message);
@@ -2659,7 +2660,7 @@ const fetchSubTasksByTaskId = (0, __TURBOPACK__imported__module__$5b$project$5d2
 });
 const createSubTask = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("subTask/create", async ({ taskId, subTaskData }, { rejectWithValue })=>{
     try {
-        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].post(`/subtask/task/${taskId}`, subTaskData);
+        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].post(`/subtask/createsubtask/${taskId}`, subTaskData);
         return res.data;
     } catch (err) {
         return rejectWithValue(err.response?.data || err.message);
@@ -2667,7 +2668,7 @@ const createSubTask = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_m
 });
 const getSubTaskById = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("subTask/getById", async (subTaskId, { rejectWithValue })=>{
     try {
-        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].get(`/subtask/${subTaskId}`);
+        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].get(`/subtask/getsubtask/${subTaskId}`);
         return res.data;
     } catch (err) {
         return rejectWithValue(err.response?.data || err.message);
@@ -2675,17 +2676,31 @@ const getSubTaskById = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
 });
 const updateSubTask = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("subTask/update", async ({ subTaskId, updates }, { rejectWithValue })=>{
     try {
-        // PATCH is better for partial updates
-        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].patch(`/subtask/${subTaskId}`, updates);
+        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].put(`/subtask/updatesubtask/${subTaskId}`, updates);
         return res.data;
     } catch (err) {
         return rejectWithValue(err.response?.data || err.message);
     }
 });
-const deleteSubTask = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("subTask/delete", async (subTaskId, { rejectWithValue })=>{
+const deleteSubTask = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("subTask/delete", async ({ taskId, subtaskId }, { rejectWithValue })=>{
     try {
-        await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].delete(`/subtask/${subTaskId}`);
-        return subTaskId;
+        await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].delete(`/subtask/softdeletesubtask/${taskId}/${subtaskId}`);
+        return subtaskId;
+    } catch (err) {
+        return rejectWithValue(err.response?.data || err.message);
+    }
+});
+const updateSubTaskStatus = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("subTask/updateStatus", async ({ taskId, subtaskId, status }, { rejectWithValue })=>{
+    console.log("Updating subtask status:", {
+        taskId,
+        subtaskId,
+        status
+    });
+    try {
+        const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["axiosInstance"].put(`/subtask/updatesubtaskstatus/${taskId}/${subtaskId}`, {
+            status
+        });
+        return res.data;
     } catch (err) {
         return rejectWithValue(err.response?.data || err.message);
     }
@@ -2708,37 +2723,82 @@ const subTaskSlice = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
         }
     },
     extraReducers: (builder)=>{
-        builder// Fetch all by taskId
-        .addCase(fetchSubTasksByTaskId.fulfilled, (state, action)=>{
+        // ========== Fetch Subtasks ==========
+        builder.addCase(fetchSubTasksByTaskId.pending, (state)=>{
+            state.loading = true;
+            state.error = null;
+        }).addCase(fetchSubTasksByTaskId.fulfilled, (state, action)=>{
+            state.loading = false;
             const { taskId, subtasks } = action.payload;
-            // Replace subtasks belonging to that task
             state.subtasks = [
                 ...state.subtasks.filter((s)=>s.taskId !== taskId),
                 ...subtasks
             ];
-        })// Create
-        .addCase(createSubTask.fulfilled, (state, action)=>{
+        }).addCase(fetchSubTasksByTaskId.rejected, (state, action)=>{
+            state.loading = false;
+            state.error = action.payload;
+        });
+        // ========== Create Subtask ==========
+        builder.addCase(createSubTask.pending, (state)=>{
+            state.loading = true;
+            state.error = null;
+        }).addCase(createSubTask.fulfilled, (state, action)=>{
+            state.loading = false;
             state.subtasks.push(action.payload);
-        })// Get by Id
-        .addCase(getSubTaskById.fulfilled, (state, action)=>{
+        }).addCase(createSubTask.rejected, (state, action)=>{
+            state.loading = false;
+            state.error = action.payload;
+        });
+        // ========== Get Subtask By Id ==========
+        builder.addCase(getSubTaskById.pending, (state)=>{
+            state.loading = true;
+            state.error = null;
+        }).addCase(getSubTaskById.fulfilled, (state, action)=>{
+            state.loading = false;
             state.currentSubTask = action.payload;
-        })// Update (generic, partial)
-        .addCase(updateSubTask.fulfilled, (state, action)=>{
+        }).addCase(getSubTaskById.rejected, (state, action)=>{
+            state.loading = false;
+            state.error = action.payload;
+        });
+        // ========== Update Subtask ==========
+        builder.addCase(updateSubTask.pending, (state)=>{
+            state.loading = true;
+            state.error = null;
+        }).addCase(updateSubTask.fulfilled, (state, action)=>{
+            state.loading = false;
             const idx = state.subtasks.findIndex((s)=>s._id === action.payload._id);
             if (idx !== -1) state.subtasks[idx] = action.payload;
             if (state.currentSubTask?._id === action.payload._id) {
                 state.currentSubTask = action.payload;
             }
-        })// Delete
-        .addCase(deleteSubTask.fulfilled, (state, action)=>{
-            state.subtasks = state.subtasks.filter((s)=>s._id !== action.payload);
-        })// Common pending/rejected
-        .addMatcher((a)=>a.type.endsWith("/pending"), (state)=>{
+        }).addCase(updateSubTask.rejected, (state, action)=>{
+            state.loading = false;
+            state.error = action.payload;
+        });
+        // ========== Delete Subtask ==========
+        builder.addCase(deleteSubTask.pending, (state)=>{
             state.loading = true;
             state.error = null;
-        }).addMatcher((a)=>a.type.endsWith("/fulfilled"), (state)=>{
+        }).addCase(deleteSubTask.fulfilled, (state, action)=>{
             state.loading = false;
-        }).addMatcher((a)=>a.type.endsWith("/rejected"), (state, action)=>{
+            state.subtasks = state.subtasks.filter((s)=>s._id !== action.payload);
+        }).addCase(deleteSubTask.rejected, (state, action)=>{
+            state.loading = false;
+            state.error = action.payload;
+        });
+        // ========== Update Subtask Status ==========
+        builder.addCase(updateSubTaskStatus.pending, (state)=>{
+            state.loading = true;
+            state.error = null;
+        }).addCase(updateSubTaskStatus.fulfilled, (state, action)=>{
+            state.loading = false;
+            const updatedSubtask = action.payload;
+            const idx = state.subtasks.findIndex((s)=>s._id === updatedSubtask._id);
+            if (idx !== -1) state.subtasks[idx] = updatedSubtask;
+            if (state.currentSubTask?._id === updatedSubtask._id) {
+                state.currentSubTask = updatedSubtask;
+            }
+        }).addCase(updateSubTaskStatus.rejected, (state, action)=>{
             state.loading = false;
             state.error = action.payload;
         });

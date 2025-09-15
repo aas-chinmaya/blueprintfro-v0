@@ -1,3 +1,8 @@
+
+
+
+
+
 // src/redux/slices/subTaskSlice.js
 
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
@@ -10,20 +15,20 @@ export const fetchSubTasksByTaskId = createAsyncThunk(
   "subTask/fetchByTaskId",
   async (taskId, { rejectWithValue }) => {
     try {
-      const res = await axiosInstance.get(`/subtask/task/${taskId}`);
-      return { taskId, subtasks: res.data };
+      const res = await axiosInstance.get(`/subtask/getallsubtasks/${taskId}`);
+      return { taskId, subtasks: res.data.subtasks };
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
     }
   }
 );
 
-// Create a new subtask under a taskId
+// Create a new subtask
 export const createSubTask = createAsyncThunk(
   "subTask/create",
   async ({ taskId, subTaskData }, { rejectWithValue }) => {
     try {
-      const res = await axiosInstance.post(`/subtask/task/${taskId}`, subTaskData);
+      const res = await axiosInstance.post(`/subtask/createsubtask/${taskId}`, subTaskData);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
@@ -36,7 +41,7 @@ export const getSubTaskById = createAsyncThunk(
   "subTask/getById",
   async (subTaskId, { rejectWithValue }) => {
     try {
-      const res = await axiosInstance.get(`/subtask/${subTaskId}`);
+      const res = await axiosInstance.get(`/subtask/getsubtask/${subTaskId}`);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
@@ -44,13 +49,12 @@ export const getSubTaskById = createAsyncThunk(
   }
 );
 
-// Generic update (partial edit for any field: title, deadline, status, etc.)
+// Generic update (partial)
 export const updateSubTask = createAsyncThunk(
   "subTask/update",
   async ({ subTaskId, updates }, { rejectWithValue }) => {
     try {
-      // PATCH is better for partial updates
-      const res = await axiosInstance.patch(`/subtask/${subTaskId}`, updates);
+      const res = await axiosInstance.put(`/subtask/updatesubtask/${subTaskId}`, updates);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
@@ -61,10 +65,29 @@ export const updateSubTask = createAsyncThunk(
 // Delete a subtask
 export const deleteSubTask = createAsyncThunk(
   "subTask/delete",
-  async (subTaskId, { rejectWithValue }) => {
+  async ({taskId,subtaskId}, { rejectWithValue }) => {
     try {
-      await axiosInstance.delete(`/subtask/${subTaskId}`);
-      return subTaskId;
+      await axiosInstance.delete(`/subtask/softdeletesubtask/${taskId}/${subtaskId}`);
+      return subtaskId;
+    } catch (err) {
+      return rejectWithValue(err.response?.data || err.message);
+    }
+  }
+);
+
+// Update subtask status
+export const updateSubTaskStatus = createAsyncThunk(
+  "subTask/updateStatus",
+  async ({ taskId, subtaskId, status }, { rejectWithValue }) => {
+ console.log("Updating subtask status:", { taskId, subtaskId, status });
+ 
+    
+    try {
+      const res = await axiosInstance.put(
+        `/subtask/updatesubtaskstatus/${taskId}/${subtaskId}`,
+        { status }
+      );
+      return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
     }
@@ -72,12 +95,11 @@ export const deleteSubTask = createAsyncThunk(
 );
 
 // ====================== Slice ======================
-
 const subTaskSlice = createSlice({
   name: "subTask",
   initialState: {
-    subtasks: [],        // collection of subtasks
-    currentSubTask: null, // single subtask details
+    subtasks: [],
+    currentSubTask: null,
     loading: false,
     error: null,
   },
@@ -90,50 +112,105 @@ const subTaskSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    // ========== Fetch Subtasks ==========
     builder
-      // Fetch all by taskId
+      .addCase(fetchSubTasksByTaskId.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
       .addCase(fetchSubTasksByTaskId.fulfilled, (state, action) => {
+        state.loading = false;
         const { taskId, subtasks } = action.payload;
-        // Replace subtasks belonging to that task
         state.subtasks = [
           ...state.subtasks.filter((s) => s.taskId !== taskId),
           ...subtasks,
         ];
       })
+      .addCase(fetchSubTasksByTaskId.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      });
 
-      // Create
+    // ========== Create Subtask ==========
+    builder
+      .addCase(createSubTask.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
       .addCase(createSubTask.fulfilled, (state, action) => {
+        state.loading = false;
         state.subtasks.push(action.payload);
       })
+      .addCase(createSubTask.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      });
 
-      // Get by Id
+    // ========== Get Subtask By Id ==========
+    builder
+      .addCase(getSubTaskById.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
       .addCase(getSubTaskById.fulfilled, (state, action) => {
+        state.loading = false;
         state.currentSubTask = action.payload;
       })
+      .addCase(getSubTaskById.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      });
 
-      // Update (generic, partial)
+    // ========== Update Subtask ==========
+    builder
+      .addCase(updateSubTask.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
       .addCase(updateSubTask.fulfilled, (state, action) => {
+        state.loading = false;
         const idx = state.subtasks.findIndex((s) => s._id === action.payload._id);
         if (idx !== -1) state.subtasks[idx] = action.payload;
         if (state.currentSubTask?._id === action.payload._id) {
           state.currentSubTask = action.payload;
         }
       })
+      .addCase(updateSubTask.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      });
 
-      // Delete
-      .addCase(deleteSubTask.fulfilled, (state, action) => {
-        state.subtasks = state.subtasks.filter((s) => s._id !== action.payload);
-      })
-
-      // Common pending/rejected
-      .addMatcher((a) => a.type.endsWith("/pending"), (state) => {
+    // ========== Delete Subtask ==========
+    builder
+      .addCase(deleteSubTask.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addMatcher((a) => a.type.endsWith("/fulfilled"), (state) => {
+      .addCase(deleteSubTask.fulfilled, (state, action) => {
         state.loading = false;
+        state.subtasks = state.subtasks.filter((s) => s._id !== action.payload);
       })
-      .addMatcher((a) => a.type.endsWith("/rejected"), (state, action) => {
+      .addCase(deleteSubTask.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      });
+
+    // ========== Update Subtask Status ==========
+    builder
+      .addCase(updateSubTaskStatus.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateSubTaskStatus.fulfilled, (state, action) => {
+        state.loading = false;
+        const updatedSubtask = action.payload;
+        const idx = state.subtasks.findIndex((s) => s._id === updatedSubtask._id);
+        if (idx !== -1) state.subtasks[idx] = updatedSubtask;
+        if (state.currentSubTask?._id === updatedSubtask._id) {
+          state.currentSubTask = updatedSubtask;
+        }
+      })
+      .addCase(updateSubTaskStatus.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
@@ -141,6 +218,5 @@ const subTaskSlice = createSlice({
 });
 
 // ====================== Exports ======================
-
 export const { clearCurrentSubTask, clearAllSubTasks } = subTaskSlice.actions;
 export default subTaskSlice.reducer;

@@ -1,15 +1,31 @@
+
+
+
+
+
+
+'use client';
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteSubTask } from '@/features/subTaskSlice';
+import { toast } from 'sonner';
 
-const DeleteSubtaskModal = ({ open, setOpen, subtask, subtasks, setSubtasks, isTaskClosed, currentPage, setCurrentPage, currentSubtasks }) => {
-  const confirmDelete = () => {
-    if (isTaskClosed) return;
-    setSubtasks(subtasks.filter((st) => st.id !== subtask.id));
-    setOpen(false);
-    alert('Subtask deleted');
-    if (currentSubtasks.length === 1 && currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+const DeleteSubtaskModal = ({ open, setOpen, subtask, taskId }) => {
+  const dispatch = useDispatch();
+  const { loading: subTaskLoading, error: subTaskError } = useSelector((state) => state.subTask);
+
+  const confirmDelete = async () => {
+    try {
+      console.log('subtask to delete:', subtask, taskId);
+      
+      await dispatch(deleteSubTask({ taskId, subtaskId: subtask?.subtask_id }));
+      toast.success('Subtask deleted successfully');
+      setOpen(false);
+    } catch (err) {
+      toast.error(subTaskError || 'Failed to delete subtask');
     }
   };
 
@@ -22,18 +38,21 @@ const DeleteSubtaskModal = ({ open, setOpen, subtask, subtasks, setSubtasks, isT
             Delete Subtask
           </DialogTitle>
         </DialogHeader>
-        <p className="text-xs sm:text-sm">Are you sure you want to delete "{subtask?.title}"?</p>
+        <p className="text-xs sm:text-sm">Are you sure you want to delete?</p>
+        {subTaskError && <p className="text-red-500 text-xs sm:text-sm">{subTaskError}</p>}
         <div className="flex justify-end gap-2 mt-3">
           <DialogClose asChild>
-            <Button variant="outline" className="text-xs sm:text-sm h-8 sm:h-9">Cancel</Button>
+            <Button variant="outline" className="text-xs sm:text-sm h-8 sm:h-9">
+              Cancel
+            </Button>
           </DialogClose>
           <Button
             variant="destructive"
             onClick={confirmDelete}
-            disabled={isTaskClosed}
+            disabled={subTaskLoading}
             className="bg-red-600 hover:bg-red-700 text-xs sm:text-sm h-8 sm:h-9"
           >
-            Delete
+            {subTaskLoading ? 'Deleting...' : 'Delete'}
           </Button>
         </div>
       </DialogContent>

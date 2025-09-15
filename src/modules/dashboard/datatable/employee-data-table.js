@@ -1,6 +1,7 @@
 
 
 "use client";
+import { useRouter } from "next/navigation";
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,6 +38,7 @@ import { fetchTeamsByEmployeeId } from "@/features/teamSlice";
 
 export function DataTableEmployee({ employeeId }) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState("task");
   const [page, setPage] = useState({ task: 1, projects: 1, team: 1 });
   const [openModal, setOpenModal] = useState(null);
