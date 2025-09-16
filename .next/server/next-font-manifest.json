@@ -1,6 +1,6 @@
 {
   "app": {
-    "[project]/src/app/(protected)/bug/assigned-bugs/page": [
+    "[project]/src/app/(protected)/client/page": [
       "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
     ],
     "[project]/src/app/(protected)/dashboard/page": [
@@ -12,19 +12,28 @@
     "[project]/src/app/(protected)/project/[id]/page": [
       "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
     ],
+    "[project]/src/app/(protected)/project/edit/[id]/page": [
+      "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
+    ],
     "[project]/src/app/(protected)/project/page": [
+      "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
+    ],
+    "[project]/src/app/(protected)/task/[id]/[subtaskid]/page": [
       "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
     ],
     "[project]/src/app/(protected)/task/[id]/page": [
       "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
     ],
+    "[project]/src/app/(protected)/task/edit/[id]/page": [
+      "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
+    ],
     "[project]/src/app/(protected)/task/page": [
       "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
     ],
-    "[project]/src/app/(protected)/team/page": [
+    "[project]/src/app/(public)/login/page": [
       "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
     ],
-    "[project]/src/app/(public)/login/page": [
+    "[project]/src/app/(public)/page": [
       "static/media/XRXV3I6Li01BKofINeaBTMnFcQ-s.p.909a49c3.woff2"
     ],
     "[project]/src/app/_not-found/page": [

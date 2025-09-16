@@ -1285,7 +1285,7 @@ export default function ProjectEditForm({ projectId }) {
         <div className="flex items-center gap-2 sm:gap-4">
           <Button
             variant="outline"
-            onClick={() => router.push("/project")}
+            onClick={() => router.back()}
             className="flex items-center gap-2 border-gray-300 text-gray-800 hover:bg-gray-100 rounded-md text-xs sm:text-sm px-3 sm:px-4 py-2"
             aria-label="Back to projects"
           >

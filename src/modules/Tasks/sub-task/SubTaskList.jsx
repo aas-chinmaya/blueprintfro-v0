@@ -1,15 +1,15 @@
+"use client";
 
-
-
-
-'use client';
-
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { useDispatch, useSelector } from 'react-redux';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import {
   CheckCircle2,
   Edit,
@@ -21,15 +21,25 @@ import {
   Lock,
   ListTodo,
   RotateCw,
-} from 'lucide-react';
-import CreateSubtaskModal from '@/modules/Tasks/sub-task/CreateSubTaskModal';
-import EditSubtaskModal from '@/modules/Tasks/sub-task/EditSubTaskModal';
-import DeleteSubtaskModal from '@/modules/Tasks/sub-task/DeleteSubTaskModal';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { fetchSubTasksByTaskId, updateSubTaskStatus } from '@/features/subTaskSlice';
-import { toast } from 'sonner';
+} from "lucide-react";
+import CreateSubtaskModal from "@/modules/Tasks/sub-task/CreateSubTaskModal";
+import EditSubtaskModal from "@/modules/Tasks/sub-task/EditSubTaskModal";
+import DeleteSubtaskModal from "@/modules/Tasks/sub-task/DeleteSubTaskModal";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  fetchSubTasksByTaskId,
+  updateSubTaskStatus,
+} from "@/features/subTaskSlice";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const SubTaskList = ({ task, taskId, isTaskClosed }) => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const { subtasks, loading, error } = useSelector((state) => state.subTask);
 
@@ -37,7 +47,6 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
   useEffect(() => {
     if (taskId) {
       dispatch(fetchSubTasksByTaskId(taskId));
-      
     }
   }, [dispatch, taskId]);
 
@@ -48,7 +57,10 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
   const totalPages = Math.ceil(safeSubtasks.length / subtasksPerPage);
   const indexOfLastSubtask = currentPage * subtasksPerPage;
   const indexOfFirstSubtask = indexOfLastSubtask - subtasksPerPage;
-  const currentSubtasks = safeSubtasks.slice(indexOfFirstSubtask, indexOfLastSubtask);
+  const currentSubtasks = safeSubtasks.slice(
+    indexOfFirstSubtask,
+    indexOfLastSubtask
+  );
 
   // Modal states
   const [openView, setOpenView] = useState(false);
@@ -58,23 +70,28 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
   const [selectedSubtask, setSelectedSubtask] = useState(null);
 
   // Calculate progress
-  const completedSubtasks = safeSubtasks.filter((st) => st.status === 'Completed').length;
-  const progress = safeSubtasks.length > 0 ? (completedSubtasks / safeSubtasks.length) * 100 : 0;
+  const completedSubtasks = safeSubtasks.filter(
+    (st) => st.status === "Completed"
+  ).length;
+  const progress =
+    safeSubtasks.length > 0
+      ? (completedSubtasks / safeSubtasks.length) * 100
+      : 0;
 
   // Get next status in cycle: Pending -> In Progress -> Completed -> Pending
   const getNextStatus = (current) => {
-    if (current === 'Pending') return 'In Progress';
-    if (current === 'In Progress') return 'Completed';
-    if (current === 'Completed') return 'Pending';
-    return 'Pending'; // Fallback
+    if (current === "Pending") return "In Progress";
+    if (current === "In Progress") return "Completed";
+    if (current === "Completed") return "Pending";
+    return "Pending"; // Fallback
   };
 
   // Get tooltip text for the toggle action
   const getToggleTooltip = (current) => {
-    if (current === 'Pending') return 'Start Progress';
-    if (current === 'In Progress') return 'Mark as Completed';
-    if (current === 'Completed') return 'Reopen Subtask';
-    return 'Toggle Status'; // Fallback
+    if (current === "Pending") return "Start Progress";
+    if (current === "In Progress") return "Mark as Completed";
+    if (current === "Completed") return "Reopen Subtask";
+    return "Toggle Status"; // Fallback
   };
 
   // Handle status toggle
@@ -82,14 +99,16 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
     if (isTaskClosed) return;
     const nextStatus = getNextStatus(subtask?.status);
     try {
-      await dispatch(updateSubTaskStatus({
-        taskId,
-        subtaskId: subtask.subtask_id,
-        status: nextStatus
-      }));
+      await dispatch(
+        updateSubTaskStatus({
+          taskId,
+          subtaskId: subtask.subtask_id,
+          status: nextStatus,
+        })
+      );
       toast.success(`Subtask status updated to ${nextStatus}`);
     } catch (err) {
-      toast.error('Failed to update subtask status');
+      toast.error("Failed to update subtask status");
     }
   };
 
@@ -124,10 +143,12 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
   };
 
   const getStatusVariant = (status) => {
-    if (status === 'Completed') return 'success';
-    if (status === 'In Progress') return 'warning';
-    return 'secondary'; // For Pending
+    if (status === "Completed") return "success";
+    if (status === "In Progress") return "warning";
+    return "secondary"; // For Pending
   };
+
+  console.log("tgrfhfjh", subtasks);
 
   return (
     <section>
@@ -145,7 +166,10 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
             <Plus className="mr-1 h-3 w-3 sm:h-4 sm:w-4" /> Add
           </Button>
         ) : (
-          <Badge variant="secondary" className="flex items-center text-xs sm:text-sm">
+          <Badge
+            variant="secondary"
+            className="flex items-center text-xs sm:text-sm"
+          >
             <Lock className="mr-1 h-3 w-3 sm:h-4 sm:w-4" /> Read-Only
           </Badge>
         )}
@@ -155,43 +179,64 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
           <span className="font-medium text-xs sm:text-sm">
             Progress: {progress.toFixed(0)}%
           </span>
-          <Badge variant={progress === 100 ? 'success' : 'default'} className="text-xs sm:text-sm">
+          <Badge
+            variant={progress === 100 ? "success" : "default"}
+            className="text-xs sm:text-sm"
+          >
             {completedSubtasks}/{safeSubtasks.length} Completed
           </Badge>
         </div>
         <Progress value={progress} className="h-2 bg-gray-200" />
       </div>
-      {loading && <div className="text-center text-sm text-gray-500">Loading subtasks...</div>}
-      {error && <div className="text-center text-sm text-red-500">Error: {error}</div>}
+      {loading && (
+        <div className="text-center text-sm text-gray-500">
+          Loading subtasks...
+        </div>
+      )}
+      {error && (
+        <div className="text-center text-sm text-red-500">Error: {error}</div>
+      )}
       {!loading && !error && safeSubtasks.length === 0 && (
-        <div className="text-center text-sm text-gray-500">No subtasks available</div>
+        <div className="text-center text-sm text-gray-500">
+          No subtasks available
+        </div>
       )}
       {!loading && !error && safeSubtasks.length > 0 && (
         <ul className="space-y-2">
-         
           {currentSubtasks.map((st) => (
             <li
-              key={st?.subtask_id}
+              key={st.subtask_id}
               className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 p-2 sm:p-3 border rounded-lg bg-muted/50 transition-all hover:shadow-md"
             >
-              
               <div className="flex-1 flex items-center">
                 <CheckCircle2
                   className={`mr-2 h-3 w-3 sm:h-4 sm:w-4 ${
-                    st.status === 'Completed' ? 'text-green-500' : 
-                    st.status === 'In Progress' ? 'text-yellow-500' : 
-                    'text-gray-400'
+                    st.status === "Completed"
+                      ? "text-green-500"
+                      : st.status === "In Progress"
+                      ? "text-yellow-500"
+                      : "text-gray-400"
                   }`}
                 />
-                <span className="font-medium text-xs sm:text-sm">{st.title}</span>
+                <span className="font-medium text-xs sm:text-sm">
+                  {st.title}
+                </span>
               </div>
               <div className="flex items-center gap-1 sm:gap-2">
-                <Badge variant={getStatusVariant(st.status)} className="text-xs sm:text-sm">
+                <Badge
+                  variant={getStatusVariant(st.status)}
+                  className="text-xs sm:text-sm"
+                >
                   {st.status}
                 </Badge>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Button variant="ghost" size="icon" onClick={() => handleView(st)} className="h-7 w-7 sm:h-8 sm:w-8">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleView(st)}
+                      className="h-7 w-7 sm:h-8 sm:w-8"
+                    >
                       <Eye className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500" />
                     </Button>
                   </TooltipTrigger>
@@ -211,7 +256,9 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
                           <RotateCw className="h-3 w-3 sm:h-4 sm:w-4 text-gray-500" />
                         </Button>
                       </TooltipTrigger>
-                      <TooltipContent>{getToggleTooltip(st.status)}</TooltipContent>
+                      <TooltipContent>
+                        {getToggleTooltip(st.status)}
+                      </TooltipContent>
                     </Tooltip>
                     <Tooltip>
                       <TooltipTrigger asChild>
@@ -277,36 +324,67 @@ const SubTaskList = ({ task, taskId, isTaskClosed }) => {
       {/* View Subtask Modal */}
       {selectedSubtask && (
         <Dialog open={openView} onOpenChange={setOpenView}>
-          <DialogContent>
+          <DialogContent className="flex flex-col justify-between max-h-[80vh]">
             <DialogHeader>
               <DialogTitle className="flex items-center">
                 <Eye className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-blue-500" />
                 View Subtask
               </DialogTitle>
             </DialogHeader>
-            <div className="space-y-3">
+
+            {/* Main Content */}
+            <div className="space-y-3 overflow-y-auto">
               <div>
                 <span className="font-medium text-xs sm:text-sm">Title:</span>
-                <p className="mt-1 text-xs sm:text-sm">{selectedSubtask.title}</p>
+                <p className="mt-1 text-xs sm:text-sm">
+                  {selectedSubtask.title}
+                </p>
               </div>
               <div>
-                <span className="font-medium text-xs sm:text-sm">Description:</span>
-                <p className="mt-1 text-xs sm:text-sm">{selectedSubtask.description || 'N/A'}</p>
+                <span className="font-medium text-xs sm:text-sm">
+                  Description:
+                </span>
+                <p className="mt-1 text-xs sm:text-sm">
+                  {selectedSubtask.description || "N/A"}
+                </p>
               </div>
               <div>
-                <span className="font-medium text-xs sm:text-sm">Priority:</span>
-                <p className="mt-1 text-xs sm:text-sm">{selectedSubtask.priority}</p>
+                <span className="font-medium text-xs sm:text-sm">
+                  Priority:
+                </span>
+                <p className="mt-1 text-xs sm:text-sm">
+                  {selectedSubtask.priority}
+                </p>
               </div>
               <div>
-                <span className="font-medium text-xs sm:text-sm">Deadline:</span>
-                <p className="mt-1 text-xs sm:text-sm">{selectedSubtask.deadline || 'N/A'}</p>
+                <span className="font-medium text-xs sm:text-sm">
+                  Deadline:
+                </span>
+                <p className="mt-1 text-xs sm:text-sm">
+                  {selectedSubtask.deadline || "N/A"}
+                </p>
               </div>
               <div>
                 <span className="font-medium text-xs sm:text-sm">Status:</span>
-                <Badge variant={getStatusVariant(selectedSubtask.status)} className="ml-2 text-xs sm:text-sm">
+                <Badge
+                  variant={getStatusVariant(selectedSubtask.status)}
+                  className="ml-2 text-xs sm:text-sm"
+                >
                   {selectedSubtask.status}
                 </Badge>
               </div>
+            </div>
+
+            {/* Button at the bottom */}
+            <div className="mt-4 flex justify-end">
+              <button
+                onClick={() =>
+                  router.push(`/task/${taskId}/${selectedSubtask?.subtask_id}`)
+                }
+                className="cursor-pointer px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-xs sm:text-sm"
+              >
+                View Full Details
+              </button>
             </div>
           </DialogContent>
         </Dialog>

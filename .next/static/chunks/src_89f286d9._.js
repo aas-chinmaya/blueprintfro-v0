@@ -2657,10 +2657,7 @@ const subTaskSlice = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
         }).addCase(fetchSubTasksByTaskId.fulfilled, (state, action)=>{
             state.loading = false;
             const { taskId, subtasks } = action.payload;
-            state.subtasks = [
-                ...state.subtasks.filter((s)=>s.taskId !== taskId),
-                ...subtasks
-            ];
+            state.subtasks = subtasks;
         }).addCase(fetchSubTasksByTaskId.rejected, (state, action)=>{
             state.loading = false;
             state.error = action.payload;

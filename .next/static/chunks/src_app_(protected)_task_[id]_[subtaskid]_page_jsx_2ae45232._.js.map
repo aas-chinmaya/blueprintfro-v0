@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Dev%20Directory/Blueprints/blueprintfro-v1/src/app/%28protected%29/task/%5Bid%5D/%5Bsubtaskid%5D/page.jsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { useParams } from \"next/navigation\";\r\n\r\nexport default function SubTaskPage() {\r\n  const { id, subtaskid } = useParams();\r\n\r\n  console.log({ id, subtaskid }); // prints the URL params\r\n\r\n  return (\r\n    <div className=\"p-4\">\r\n      <h1 className=\"text-xl font-bold\">Subtask Details</h1>\r\n      <p><strong>Task ID:</strong> {id}</p>\r\n      <p><strong>Subtask ID:</strong> {subtaskid}</p>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;;;AAFA;;AAIe,SAAS;;IACtB,MAAM,EAAE,EAAE,EAAE,SAAS,EAAE,GAAG,CAAA,GAAA,qIAAA,CAAA,YAAS,AAAD;IAElC,QAAQ,GAAG,CAAC;QAAE;QAAI;IAAU,IAAI,wBAAwB;IAExD,qBACE,6LAAC;QAAI,WAAU;;0BACb,6LAAC;gBAAG,WAAU;0BAAoB;;;;;;0BAClC,6LAAC;;kCAAE,6LAAC;kCAAO;;;;;;oBAAiB;oBAAE;;;;;;;0BAC9B,6LAAC;;kCAAE,6LAAC;kCAAO;;;;;;oBAAoB;oBAAE;;;;;;;;;;;;;AAGvC;GAZwB;;QACI,qIAAA,CAAA,YAAS;;;KADb","debugId":null}}]
+}

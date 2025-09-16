@@ -2637,7 +2637,7 @@ function DataTableEmployee({ employeeId }) {
                                 columnNumber: 13
                             }, this),
                             " Assigned To: ",
-                            item.assignedTo
+                            item.assignedToName
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/modules/dashboard/datatable/employee-data-table.js",
@@ -3943,7 +3943,7 @@ function DataTable() {
                                 columnNumber: 13
                             }, this),
                             "Assigned To: ",
-                            item.assignedTo
+                            item.assignedToName
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/modules/dashboard/datatable/cpc-data-table.js",

@@ -1,5 +1,3 @@
-
-
 "use client";
 import { useRouter } from "next/navigation";
 
@@ -35,6 +33,7 @@ import {
 import { getAllTaskByEmployeeId } from "@/features/taskSlice";
 import { fetchProjectsByEmployeeId } from "@/features/projectSlice";
 import { fetchTeamsByEmployeeId } from "@/features/teamSlice";
+import { formatDateUTC } from "@/utils/formatDate";
 
 export function DataTableEmployee({ employeeId }) {
   const dispatch = useDispatch();
@@ -127,7 +126,7 @@ export function DataTableEmployee({ employeeId }) {
             <ClipboardPenLine /> Project: {item.projectName}
           </p>
           <p className="flex items-center text-sm text-muted-foreground gap-2">
-            <UserRound /> Assigned To: {item.assignedTo}
+            <UserRound /> Assigned To: {item.assignedToName}
           </p>
           <p className="flex items-center text-sm text-muted-foreground gap-2">
             <TriangleAlert /> Priority: {item.priority}
@@ -136,14 +135,21 @@ export function DataTableEmployee({ employeeId }) {
             <ChartLine /> Status: {item.status}
           </p>
           <p className="flex items-center text-sm text-muted-foreground gap-2">
-            <CalendarDays /> Deadline:{" "}
-            {new Date(item.deadline).toLocaleDateString()}
+            <CalendarDays /> Deadline:
+            {formatDateUTC(item.deadline) || "N/A"}
           </p>
+           <Button
+                      className="w-1/4 ml-80 bg-[#1447e6]"
+                      onClick={() => router.push(`/task/${item.task_id}`)}
+                    >
+                      View More
+                    </Button>
         </div>
       );
     }
 
     if (type === "project") {
+
       return (
         <div className="grid gap-4 p-4">
           <h3 className="text-lg font-semibold">{item.projectName}</h3>
@@ -156,33 +162,17 @@ export function DataTableEmployee({ employeeId }) {
           <p className="text-sm text-muted-foreground flex items-center gap-3">
             <p className="text-sm text-muted-foreground flex items-center gap-3">
               <CalendarDays />
-              Start Date: {item.startDate}
+              Started From: {formatDateUTC(item.startDate) || "N/A"}
             </p>
-            <CalendarDays />
-            End Date: {item.endDate}
+           
           </p>
-          <div>
-            <p className="text-sm font-medium mb-1 text-muted-foreground">
-              Progress
-            </p>
-            <div className="flex items-center gap-2">
-              <Progress
-                value={getProgressValue(item.status)}
-                className="h-2 bg-muted"
-                indicatorClassName="bg-[#1447e6]"
-              />
-              <span className="text-xs text-muted-foreground">
-                {getProgressValue(item.status)}%
-              </span>
-            </div>
-            
-          </div>
-            <Button
-                      className="w-1/4 ml-80 bg-[#1447e6]"
-                      onClick={() => router.push(`/project/${item.projectId}`)}
-                    >
-                      View More
-                    </Button>
+
+          <Button
+            className="w-1/4 ml-80 bg-[#1447e6]"
+            onClick={() => router.push(`/project/${item.projectId}`)}
+          >
+            View More
+          </Button>
         </div>
       );
     }
@@ -267,137 +257,138 @@ export function DataTableEmployee({ employeeId }) {
           </div>
 
           {/* Tasks */}
-             <div className="p-4 lg:p-6">
+          <div className="p-4 lg:p-6">
+            <TabsContent value="task">
+              {paginate(employeeTasks, page.task).map((task) => (
+                <Dialog
+                  key={task._id}
+                  open={openModal === task._id}
+                  onOpenChange={(open) => setOpenModal(open ? task._id : null)}
+                >
+                  <DialogTrigger asChild>
+                    <div className="flex items-center justify-between p-4 mb-3 border rounded-lg hover:bg-muted/40 cursor-pointer">
+                      <div className="flex items-center gap-4">
+                        <LucideCalendar className="h-5 w-5 text-muted-foreground" />
+                        <div>
+                          <h3 className="text-sm font-semibold">
+                            {task.title}
+                          </h3>
+                          <p className="text-xs text-muted-foreground">
+                            ID: {task.task_id}
+                          </p>
+                        </div>
+                      </div>
+                      <Badge
+                        className={
+                          task.status === "Completed"
+                            ? "bg-[#1447e6] text-white"
+                            : "bg-muted text-muted-foreground"
+                        }
+                      >
+                        {task.status}
+                      </Badge>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="bg-background rounded-lg max-w-lg">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center justify-center gap-3 text-lg font-bold bg-blue-100  p-4 rounded-2xl text-blue-800">
+                        Task Details
+                      </DialogTitle>
+                    </DialogHeader>
+                    {renderModalContent(task, "task")}
+                  </DialogContent>
+                </Dialog>
+              ))}
+              {renderPagination(employeeTasks.length, "task")}
+            </TabsContent>
 
-          <TabsContent value="task">
-            {paginate(employeeTasks, page.task).map((task) => (
-              <Dialog
-                key={task._id}
-                open={openModal === task._id}
-                onOpenChange={(open) => setOpenModal(open ? task._id : null)}
-              >
-                <DialogTrigger asChild>
-                  <div className="flex items-center justify-between p-4 mb-3 border rounded-lg hover:bg-muted/40 cursor-pointer">
-                    <div className="flex items-center gap-4">
-                      <LucideCalendar className="h-5 w-5 text-muted-foreground" />
-                      <div>
-                        <h3 className="text-sm font-semibold">{task.title}</h3>
-                        <p className="text-xs text-muted-foreground">
-                          ID: {task.task_id}
-                        </p>
+            {/* Projects */}
+            <TabsContent value="projects">
+              {paginate(employeeProjects, page.projects).map((project) => (
+                <Dialog
+                  key={project.projectId}
+                  open={openModal === project.projectId}
+                  onOpenChange={(open) =>
+                    setOpenModal(open ? project.projectId : null)
+                  }
+                >
+                  <DialogTrigger asChild>
+                    <div className="flex items-center justify-between p-4 mb-3 border rounded-lg hover:bg-muted/40 cursor-pointer">
+                      <div className="flex items-center gap-4">
+                        <LucideFolder className="h-5 w-5 text-muted-foreground" />
+                        <div>
+                          <h3 className="text-sm font-semibold">
+                            {project.projectName}
+                          </h3>
+                          <p className="text-xs text-muted-foreground">
+                            Project ID: {project.projectId}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Progress
+                          value={getProgressValue(project.status)}
+                          className="h-2 w-24 bg-muted"
+                          indicatorClassName="bg-[#1447e6]"
+                        />
+                        <span className="text-xs text-muted-foreground">
+                          {getProgressValue(project.status)}%
+                        </span>
                       </div>
                     </div>
-                    <Badge
-                      className={
-                        task.status === "Completed"
-                          ? "bg-[#1447e6] text-white"
-                          : "bg-muted text-muted-foreground"
-                      }
-                    >
-                      {task.status}
-                    </Badge>
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="bg-background rounded-lg max-w-lg">
-                  <DialogHeader>
-                    <DialogTitle className="flex items-center justify-center gap-3 text-lg font-bold bg-blue-100  p-4 rounded-2xl text-blue-800">
-                      Task Details
-                    </DialogTitle>
-                  </DialogHeader>
-                  {renderModalContent(task, "task")}
-                </DialogContent>
-              </Dialog>
-            ))}
-            {renderPagination(employeeTasks.length, "task")}
-          </TabsContent>
+                  </DialogTrigger>
+                  <DialogContent className="bg-background rounded-lg max-w-lg">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center justify-center gap-3 text-lg font-bold bg-blue-100 p-4 rounded-2xl text-blue-800">
+                        <NotebookPen /> Project Details
+                      </DialogTitle>
+                    </DialogHeader>
+                    {renderModalContent(project, "project")}
+                  </DialogContent>
+                </Dialog>
+              ))}
+              {renderPagination(employeeProjects.length, "projects")}
+            </TabsContent>
 
-          {/* Projects */}
-          <TabsContent value="projects">
-            {paginate(employeeProjects, page.projects).map((project) => (
-              <Dialog
-                key={project.projectId}
-                open={openModal === project.projectId}
-                onOpenChange={(open) =>
-                  setOpenModal(open ? project.projectId : null)
-                }
-              >
-                <DialogTrigger asChild>
-                  <div className="flex items-center justify-between p-4 mb-3 border rounded-lg hover:bg-muted/40 cursor-pointer">
-                    <div className="flex items-center gap-4">
-                      <LucideFolder className="h-5 w-5 text-muted-foreground" />
-                      <div>
-                        <h3 className="text-sm font-semibold">
-                          {project.projectName}
-                        </h3>
-                        <p className="text-xs text-muted-foreground">
-                          Project ID: {project.projectId}
-                        </p>
+            {/* Teams */}
+            <TabsContent value="team">
+              {paginate(teamsByEmployee, page.team).map((team) => (
+                <Dialog
+                  key={team._id}
+                  open={openModal === team._id}
+                  onOpenChange={(open) => setOpenModal(open ? team._id : null)}
+                >
+                  <DialogTrigger asChild>
+                    <div className="flex items-center justify-between p-4 mb-3 border rounded-lg hover:bg-muted/40 cursor-pointer">
+                      <div className="flex items-center gap-4">
+                        <LucideUsers className="h-5 w-5 text-muted-foreground" />
+                        <div>
+                          <h3 className="text-sm font-semibold">
+                            {team.projectName}
+                          </h3>
+                          <p className="text-xs text-muted-foreground">
+                            Team ID: {team.teamId}
+                          </p>
+                        </div>
                       </div>
+                      <Badge className="bg-muted text-muted-foreground">
+                        Members: {team.teamMembers.length}
+                      </Badge>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Progress
-                        value={getProgressValue(project.status)}
-                        className="h-2 w-24 bg-muted"
-                        indicatorClassName="bg-[#1447e6]"
-                      />
-                      <span className="text-xs text-muted-foreground">
-                        {getProgressValue(project.status)}%
-                      </span>
-                    </div>
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="bg-background rounded-lg max-w-lg">
-                  <DialogHeader>
-                    <DialogTitle className="flex items-center justify-center gap-3 text-lg font-bold bg-blue-100 p-4 rounded-2xl text-blue-800">
-                      <NotebookPen /> Project Details
-                    </DialogTitle>
-                  </DialogHeader>
-                  {renderModalContent(project, "project")}
-                </DialogContent>
-              </Dialog>
-            ))}
-            {renderPagination(employeeProjects.length, "projects")}
-          </TabsContent>
-
-          {/* Teams */}
-          <TabsContent value="team">
-            {paginate(teamsByEmployee, page.team).map((team) => (
-              <Dialog
-                key={team._id}
-                open={openModal === team._id}
-                onOpenChange={(open) => setOpenModal(open ? team._id : null)}
-              >
-                <DialogTrigger asChild>
-                  <div className="flex items-center justify-between p-4 mb-3 border rounded-lg hover:bg-muted/40 cursor-pointer">
-                    <div className="flex items-center gap-4">
-                      <LucideUsers className="h-5 w-5 text-muted-foreground" />
-                      <div>
-                        <h3 className="text-sm font-semibold">
-                          {team.projectName}
-                        </h3>
-                        <p className="text-xs text-muted-foreground">
-                          Team ID: {team.teamId}
-                        </p>
-                      </div>
-                    </div>
-                    <Badge className="bg-muted text-muted-foreground">
-                      Members: {team.teamMembers.length}
-                    </Badge>
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="bg-background rounded-lg max-w-lg">
-                  <DialogHeader>
-                    <DialogTitle className="text-lg text-blue-800 font-semibold">
-                      Team Details
-                    </DialogTitle>
-                  </DialogHeader>
-                  {renderModalContent(team, "team")}
-                </DialogContent>
-              </Dialog>
-            ))}
-            {renderPagination(teamsByEmployee.length, "team")}
-          </TabsContent>
-             </div>
+                  </DialogTrigger>
+                  <DialogContent className="bg-background rounded-lg max-w-lg">
+                    <DialogHeader>
+                      <DialogTitle className="text-lg text-blue-800 font-semibold">
+                        Team Details
+                      </DialogTitle>
+                    </DialogHeader>
+                    {renderModalContent(team, "team")}
+                  </DialogContent>
+                </Dialog>
+              ))}
+              {renderPagination(teamsByEmployee.length, "team")}
+            </TabsContent>
+          </div>
         </Tabs>
       </div>
     </div>

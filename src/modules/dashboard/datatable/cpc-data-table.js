@@ -45,6 +45,8 @@ import { fetchTasksByDeadline } from "@/features/dashboard/dashboardSlice";
 import { fetchAllProjects } from "@/features/projectSlice";
 import { fetchAllTeams } from "@/features/teamSlice";
 import { useRouter } from "next/navigation";
+import { format } from "date-fns/format";
+import { formatDateUTC } from "@/utils/formatDate";
 
 // Skeleton Components
 const TaskSkeleton = () => (
@@ -199,7 +201,7 @@ export function DataTable() {
           </p>
           <p className="text-sm text-muted-foreground flex items-center gap-2">
             <UserRound />
-            Assigned To: {item.assignedTo}
+            Assigned To: {item.assignedToName}
           </p>
           <p className="text-sm text-muted-foreground flex items-center gap-2">
             <TriangleAlert />
@@ -211,8 +213,14 @@ export function DataTable() {
           </p>
           <p className="text-sm text-muted-foreground flex items-center gap-2">
             <CalendarDays />
-            Deadline: {new Date(item.deadline).toLocaleDateString()}
+            Deadline: {formatDateUTC(item.deadline) || "N/A"}
           </p>
+               <Button
+                      className="w-1/4 ml-80 bg-[#1447e6]"
+                      onClick={() => router.push(`/task/${item.task_id}`)}
+                    >
+                      View More
+                    </Button>
         </div>
       );
     } else if (type === "project") {
@@ -232,27 +240,10 @@ export function DataTable() {
           </p>
           <p className="text-sm text-muted-foreground flex items-center gap-3">
             <CalendarDays />
-            Start Date: {item.startDate}
+            Started From: {item.startDate}
           </p>
-          <p className="text-sm text-muted-foreground flex items-center gap-3">
-            <CalendarDays />
-            End Date: {item.endDate}
-          </p>
-          <div>
-            <p className="text-sm font-medium text-muted-foreground mb-1">
-              Progress
-            </p>
-            <div className="flex items-center gap-2">
-              <Progress
-                value={getProgressValue(item.status)} // Replace with actual progress data
-                className="h-2 bg-muted"
-                indicatorClassName="bg-[#1447e6]"
-              />
-              <span className="text-xs text-gray-600 font-medium">
-                {getProgressValue(item.status)}%
-              </span>
-            </div>
-          </div>
+         
+          
           <Button
             className="w-1/4 ml-80 bg-[#1447e6]"
             onClick={() => router.push(`/project/${item.projectId}`)}

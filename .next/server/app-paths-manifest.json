@@ -1,13 +1,16 @@
 {
-  "/(protected)/bug/assigned-bugs/page": "app/(protected)/bug/assigned-bugs/page.js",
+  "/(protected)/client/page": "app/(protected)/client/page.js",
   "/(protected)/dashboard/page": "app/(protected)/dashboard/page.js",
   "/(protected)/inbox/page": "app/(protected)/inbox/page.js",
   "/(protected)/project/[id]/page": "app/(protected)/project/[id]/page.js",
+  "/(protected)/project/edit/[id]/page": "app/(protected)/project/edit/[id]/page.js",
   "/(protected)/project/page": "app/(protected)/project/page.js",
+  "/(protected)/task/[id]/[subtaskid]/page": "app/(protected)/task/[id]/[subtaskid]/page.js",
   "/(protected)/task/[id]/page": "app/(protected)/task/[id]/page.js",
+  "/(protected)/task/edit/[id]/page": "app/(protected)/task/edit/[id]/page.js",
   "/(protected)/task/page": "app/(protected)/task/page.js",
-  "/(protected)/team/page": "app/(protected)/team/page.js",
   "/(public)/login/page": "app/(public)/login/page.js",
+  "/(public)/page": "app/(public)/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }

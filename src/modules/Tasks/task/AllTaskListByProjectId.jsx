@@ -95,19 +95,7 @@ const AllTaskListByProjectId = ({ projectId, project }) => {
 
 
 
-    // Choose tasks based on role and view mode
-  // let tasks = [];
 
-  // if (currentUser?.role === "cpc" || (isTeamLead && viewMode === "all")) {
-  //   // For cpc or team lead in "all" view, show all tasks for the project
-  //   tasks = tasksFromStore;
-  // } else if (viewMode === "my") {
-  //   // For "my" view, show only tasks for the logged-in employee
-  //   tasks = employeeProjectTasks || [];
-  // } else {
-  //   // Default: show tasksFromStore for other cases
-  //   tasks = tasksFromStore;
-  // }
 
 
 

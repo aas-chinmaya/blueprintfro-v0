@@ -159,7 +159,6 @@ export default function MyWorkedProject({ employeeId }) {
 
 
 
-  console.log(employeeProjects);
   return (
     <div className="mx-auto min-h-screen">
      

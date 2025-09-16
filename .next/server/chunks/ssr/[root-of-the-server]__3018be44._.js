@@ -369,13 +369,13 @@ function FeatureSection() {
                                     children: "Features"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/hero-section.jsx",
-                                    lineNumber: 100,
+                                    lineNumber: 159,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/layout/hero-section.jsx",
-                            lineNumber: 98,
+                            lineNumber: 157,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -383,13 +383,13 @@ function FeatureSection() {
                             children: "No more juggling between apps. Every key workflow lives here — organized, accessible, and optimized."
                         }, void 0, false, {
                             fileName: "[project]/src/components/layout/hero-section.jsx",
-                            lineNumber: 104,
+                            lineNumber: 163,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/layout/hero-section.jsx",
-                    lineNumber: 97,
+                    lineNumber: 156,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -403,12 +403,12 @@ function FeatureSection() {
                                         className: "w-6 h-6 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/layout/hero-section.jsx",
-                                        lineNumber: 116,
+                                        lineNumber: 175,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/hero-section.jsx",
-                                    lineNumber: 115,
+                                    lineNumber: 174,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -416,7 +416,7 @@ function FeatureSection() {
                                     children: title
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/hero-section.jsx",
-                                    lineNumber: 118,
+                                    lineNumber: 177,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -424,29 +424,29 @@ function FeatureSection() {
                                     children: desc
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/layout/hero-section.jsx",
-                                    lineNumber: 119,
+                                    lineNumber: 178,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, title, true, {
                             fileName: "[project]/src/components/layout/hero-section.jsx",
-                            lineNumber: 111,
+                            lineNumber: 170,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/layout/hero-section.jsx",
-                    lineNumber: 109,
+                    lineNumber: 168,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/layout/hero-section.jsx",
-            lineNumber: 96,
+            lineNumber: 155,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/layout/hero-section.jsx",
-        lineNumber: 95,
+        lineNumber: 154,
         columnNumber: 5
     }, this);
 }

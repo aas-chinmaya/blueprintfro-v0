@@ -44,6 +44,65 @@ export function HeroSection() {
     </section>
   );
 }
+// 'use client';
+// import {
+//   LineChart,
+//   Briefcase,
+//   CalendarClock,
+//   FileText,
+//   FileSignature,
+//   Bug,
+//   Users,
+//   ClipboardList,
+//   Contact2,
+//   ArrowRight,
+// } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { useRouter } from "next/navigation";
+
+// // ================== Hero Section =====================
+// export function HeroSection() {
+//   const router = useRouter();
+//   return (
+//     <section className="relative w-full h-[90vh] md:h-[85vh] overflow-hidden text-center flex items-center justify-center bg-black">
+//       {/* Video Background */}
+//       <video
+//         className="absolute top-0 left-0 w-full h-full object-cover"
+//         src="/nomoney.mp4" // Replace with your video path
+//         autoPlay
+//         muted
+//         loop
+//         playsInline
+//       ></video>
+
+//       {/* Overlay */}
+//       <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+
+//       {/* Content */}
+//      <div className="relative container mx-auto px-4 md:px-6 space-y-8 max-w-4xl text-white">
+//   <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+//     No Money{" "}
+//     <span className="bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent">
+//       No Work
+//     </span>
+//   </h1>
+//   <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto text-white/90">
+//     Give me the money first, then expect the work. Until now, I’ve been chilling and enjoying life!
+//   </p>
+//   <div className="flex justify-center flex-col sm:flex-row gap-4 pt-4">
+//     <Button size="lg" className="gap-2 px-8" onClick={() => router.push("/login")}>
+//       Bank Transfer First
+//       <ArrowRight className="h-4 w-4" />
+//     </Button>
+//     <Button size="lg"  className="border-white text-white hover:bg-white hover:text-black">
+//       Get My QR Code
+//     </Button>
+//   </div>
+// </div>
+
+//     </section>
+//   );
+// }
 
 // ================== Features Section =====================
 export function FeatureSection() {

@@ -1419,7 +1419,6 @@ function MyWorkedProject({ employeeId }) {
             columnNumber: 8
         }, this);
     }
-    console.log(employeeProjects);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "mx-auto min-h-screen",
         children: [
@@ -1437,12 +1436,12 @@ function MyWorkedProject({ employeeId }) {
                                     children: "MY Projects"
                                 }, void 0, false, {
                                     fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                    lineNumber: 171,
+                                    lineNumber: 170,
                                     columnNumber: 9
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                lineNumber: 170,
+                                lineNumber: 169,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1456,7 +1455,7 @@ function MyWorkedProject({ employeeId }) {
                                                 "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                lineNumber: 178,
+                                                lineNumber: 177,
                                                 columnNumber: 11
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -1468,7 +1467,7 @@ function MyWorkedProject({ employeeId }) {
                                                 "aria-label": "Search projects by name, ID, or team lead"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                lineNumber: 182,
+                                                lineNumber: 181,
                                                 columnNumber: 11
                                             }, this),
                                             searchTerm && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1481,18 +1480,18 @@ function MyWorkedProject({ employeeId }) {
                                                     className: "h-5 w-5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                    lineNumber: 198,
+                                                    lineNumber: 197,
                                                     columnNumber: 15
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                lineNumber: 191,
+                                                lineNumber: 190,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                        lineNumber: 177,
+                                        lineNumber: 176,
                                         columnNumber: 9
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1510,7 +1509,7 @@ function MyWorkedProject({ employeeId }) {
                                                                 "aria-hidden": "true"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 208,
+                                                                lineNumber: 207,
                                                                 columnNumber: 17
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1518,25 +1517,25 @@ function MyWorkedProject({ employeeId }) {
                                                                 children: "Filter"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 209,
+                                                                lineNumber: 208,
                                                                 columnNumber: 17
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiChevronDown"], {
                                                                 "aria-hidden": "true"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 210,
+                                                                lineNumber: 209,
                                                                 columnNumber: 17
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                        lineNumber: 207,
+                                                        lineNumber: 206,
                                                         columnNumber: 15
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                    lineNumber: 206,
+                                                    lineNumber: 205,
                                                     columnNumber: 13
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
@@ -1547,7 +1546,7 @@ function MyWorkedProject({ employeeId }) {
                                                             children: "Filter by Status"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 214,
+                                                            lineNumber: 213,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1559,7 +1558,7 @@ function MyWorkedProject({ employeeId }) {
                                                                         children: "All Projects"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 217,
+                                                                        lineNumber: 216,
                                                                         columnNumber: 19
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1567,18 +1566,18 @@ function MyWorkedProject({ employeeId }) {
                                                                         children: projectStats.total
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 218,
+                                                                        lineNumber: 217,
                                                                         columnNumber: 19
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 216,
+                                                                lineNumber: 215,
                                                                 columnNumber: 17
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 215,
+                                                            lineNumber: 214,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1593,14 +1592,14 @@ function MyWorkedProject({ employeeId }) {
                                                                                 className: "mr-1.5 text-amber-500"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                                lineNumber: 224,
+                                                                                lineNumber: 223,
                                                                                 columnNumber: 21
                                                                             }, this),
                                                                             "Planned"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 223,
+                                                                        lineNumber: 222,
                                                                         columnNumber: 19
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1608,18 +1607,18 @@ function MyWorkedProject({ employeeId }) {
                                                                         children: projectStats.planned
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 227,
+                                                                        lineNumber: 226,
                                                                         columnNumber: 19
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 222,
+                                                                lineNumber: 221,
                                                                 columnNumber: 17
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 221,
+                                                            lineNumber: 220,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1634,14 +1633,14 @@ function MyWorkedProject({ employeeId }) {
                                                                                 className: "mr-1.5 text-blue-500"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                                lineNumber: 233,
+                                                                                lineNumber: 232,
                                                                                 columnNumber: 21
                                                                             }, this),
                                                                             "In Progress"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 232,
+                                                                        lineNumber: 231,
                                                                         columnNumber: 19
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1649,18 +1648,18 @@ function MyWorkedProject({ employeeId }) {
                                                                         children: projectStats.inProgress
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 236,
+                                                                        lineNumber: 235,
                                                                         columnNumber: 19
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 231,
+                                                                lineNumber: 230,
                                                                 columnNumber: 17
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 230,
+                                                            lineNumber: 229,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1675,14 +1674,14 @@ function MyWorkedProject({ employeeId }) {
                                                                                 className: "mr-1.5 text-emerald-500"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                                lineNumber: 242,
+                                                                                lineNumber: 241,
                                                                                 columnNumber: 21
                                                                             }, this),
                                                                             "Completed"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 241,
+                                                                        lineNumber: 240,
                                                                         columnNumber: 19
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -1690,30 +1689,30 @@ function MyWorkedProject({ employeeId }) {
                                                                         children: projectStats.completed
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 245,
+                                                                        lineNumber: 244,
                                                                         columnNumber: 19
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 240,
+                                                                lineNumber: 239,
                                                                 columnNumber: 17
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 239,
+                                                            lineNumber: 238,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 248,
+                                                            lineNumber: 247,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuLabel"], {
                                                             children: "Sort by"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 249,
+                                                            lineNumber: 248,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1725,31 +1724,31 @@ function MyWorkedProject({ employeeId }) {
                                                                         children: "Project Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 252,
+                                                                        lineNumber: 251,
                                                                         columnNumber: 19
                                                                     }, this),
                                                                     sortField === 'projectName' && (sortDirection === 'asc' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiArrowUp"], {
                                                                         className: "ml-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 255,
+                                                                        lineNumber: 254,
                                                                         columnNumber: 23
                                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiArrowDown"], {
                                                                         className: "ml-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 257,
+                                                                        lineNumber: 256,
                                                                         columnNumber: 23
                                                                     }, this))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 251,
+                                                                lineNumber: 250,
                                                                 columnNumber: 17
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 250,
+                                                            lineNumber: 249,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1761,31 +1760,31 @@ function MyWorkedProject({ employeeId }) {
                                                                         children: "Project ID"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 263,
+                                                                        lineNumber: 262,
                                                                         columnNumber: 19
                                                                     }, this),
                                                                     sortField === 'projectId' && (sortDirection === 'asc' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiArrowUp"], {
                                                                         className: "ml-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 266,
+                                                                        lineNumber: 265,
                                                                         columnNumber: 23
                                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiArrowDown"], {
                                                                         className: "ml-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 268,
+                                                                        lineNumber: 267,
                                                                         columnNumber: 23
                                                                     }, this))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 262,
+                                                                lineNumber: 261,
                                                                 columnNumber: 17
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 261,
+                                                            lineNumber: 260,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1797,36 +1796,36 @@ function MyWorkedProject({ employeeId }) {
                                                                         children: "Status"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 274,
+                                                                        lineNumber: 273,
                                                                         columnNumber: 19
                                                                     }, this),
                                                                     sortField === 'status' && (sortDirection === 'asc' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiArrowUp"], {
                                                                         className: "ml-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 277,
+                                                                        lineNumber: 276,
                                                                         columnNumber: 23
                                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiArrowDown"], {
                                                                         className: "ml-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                        lineNumber: 279,
+                                                                        lineNumber: 278,
                                                                         columnNumber: 23
                                                                     }, this))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                                lineNumber: 273,
+                                                                lineNumber: 272,
                                                                 columnNumber: 17
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 272,
+                                                            lineNumber: 271,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 283,
+                                                            lineNumber: 282,
                                                             columnNumber: 15
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1835,46 +1834,46 @@ function MyWorkedProject({ employeeId }) {
                                                             children: "Clear All Filters"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 284,
+                                                            lineNumber: 283,
                                                             columnNumber: 15
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                    lineNumber: 213,
+                                                    lineNumber: 212,
                                                     columnNumber: 13
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                            lineNumber: 205,
+                                            lineNumber: 204,
                                             columnNumber: 11
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                        lineNumber: 204,
+                                        lineNumber: 203,
                                         columnNumber: 9
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                lineNumber: 175,
+                                lineNumber: 174,
                                 columnNumber: 7
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                        lineNumber: 168,
+                        lineNumber: 167,
                         columnNumber: 5
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                    lineNumber: 167,
+                    lineNumber: 166,
                     columnNumber: 3
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                lineNumber: 166,
+                lineNumber: 165,
                 columnNumber: 1
             }, this),
             sortedProjects.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -1889,12 +1888,12 @@ function MyWorkedProject({ employeeId }) {
                                 "aria-hidden": "true"
                             }, void 0, false, {
                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                lineNumber: 299,
+                                lineNumber: 298,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                            lineNumber: 298,
+                            lineNumber: 297,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1902,7 +1901,7 @@ function MyWorkedProject({ employeeId }) {
                             children: "No projects found"
                         }, void 0, false, {
                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                            lineNumber: 301,
+                            lineNumber: 300,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1913,18 +1912,18 @@ function MyWorkedProject({ employeeId }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                            lineNumber: 302,
+                            lineNumber: 301,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                    lineNumber: 297,
+                    lineNumber: 296,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                lineNumber: 296,
+                lineNumber: 295,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6",
@@ -1939,7 +1938,7 @@ function MyWorkedProject({ employeeId }) {
                                 className: `absolute top-0 left-0 w-full h-1 ${progressColors[project.status]}`
                             }, void 0, false, {
                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                lineNumber: 318,
+                                lineNumber: 317,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1956,7 +1955,7 @@ function MyWorkedProject({ employeeId }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                lineNumber: 321,
+                                                lineNumber: 320,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1972,18 +1971,18 @@ function MyWorkedProject({ employeeId }) {
                                                     className: "w-5 h-5 text-[#38b000] group-hover:text-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                    lineNumber: 335,
+                                                    lineNumber: 334,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                lineNumber: 325,
+                                                lineNumber: 324,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                        lineNumber: 320,
+                                        lineNumber: 319,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1991,7 +1990,7 @@ function MyWorkedProject({ employeeId }) {
                                         children: project.projectName || 'Unnamed Project'
                                     }, void 0, false, {
                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                        lineNumber: 339,
+                                        lineNumber: 338,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2007,12 +2006,12 @@ function MyWorkedProject({ employeeId }) {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 346,
+                                                            lineNumber: 345,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                        lineNumber: 345,
+                                                        lineNumber: 344,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2023,13 +2022,13 @@ function MyWorkedProject({ employeeId }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                        lineNumber: 348,
+                                                        lineNumber: 347,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                lineNumber: 344,
+                                                lineNumber: 343,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2042,12 +2041,12 @@ function MyWorkedProject({ employeeId }) {
                                                             "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                            lineNumber: 353,
+                                                            lineNumber: 352,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                        lineNumber: 352,
+                                                        lineNumber: 351,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2055,25 +2054,25 @@ function MyWorkedProject({ employeeId }) {
                                                         children: project.teamLeadName || 'Unassigned'
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                        lineNumber: 355,
+                                                        lineNumber: 354,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                                lineNumber: 351,
+                                                lineNumber: 350,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                        lineNumber: 343,
+                                        lineNumber: 342,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                lineNumber: 319,
+                                lineNumber: 318,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardFooter"], {
@@ -2090,35 +2089,35 @@ function MyWorkedProject({ employeeId }) {
                                             "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                            lineNumber: 398,
+                                            lineNumber: 397,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                    lineNumber: 391,
+                                    lineNumber: 390,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                                lineNumber: 390,
+                                lineNumber: 389,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, project.projectId, true, {
                         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                        lineNumber: 310,
+                        lineNumber: 309,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/modules/project/MyWorkedProject.js",
-                lineNumber: 308,
+                lineNumber: 307,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/modules/project/MyWorkedProject.js",
-        lineNumber: 164,
+        lineNumber: 163,
         columnNumber: 5
     }, this);
 }

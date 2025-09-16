@@ -1,8 +1,3 @@
-
-
-
-
-
 // src/redux/slices/subTaskSlice.js
 
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
@@ -28,7 +23,10 @@ export const createSubTask = createAsyncThunk(
   "subTask/create",
   async ({ taskId, subTaskData }, { rejectWithValue }) => {
     try {
-      const res = await axiosInstance.post(`/subtask/createsubtask/${taskId}`, subTaskData);
+      const res = await axiosInstance.post(
+        `/subtask/createsubtask/${taskId}`,
+        subTaskData
+      );
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
@@ -54,7 +52,10 @@ export const updateSubTask = createAsyncThunk(
   "subTask/update",
   async ({ subTaskId, updates }, { rejectWithValue }) => {
     try {
-      const res = await axiosInstance.put(`/subtask/updatesubtask/${subTaskId}`, updates);
+      const res = await axiosInstance.put(
+        `/subtask/updatesubtask/${subTaskId}`,
+        updates
+      );
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
@@ -65,9 +66,11 @@ export const updateSubTask = createAsyncThunk(
 // Delete a subtask
 export const deleteSubTask = createAsyncThunk(
   "subTask/delete",
-  async ({taskId,subtaskId}, { rejectWithValue }) => {
+  async ({ taskId, subtaskId }, { rejectWithValue }) => {
     try {
-      await axiosInstance.delete(`/subtask/softdeletesubtask/${taskId}/${subtaskId}`);
+      await axiosInstance.delete(
+        `/subtask/softdeletesubtask/${taskId}/${subtaskId}`
+      );
       return subtaskId;
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
@@ -79,9 +82,8 @@ export const deleteSubTask = createAsyncThunk(
 export const updateSubTaskStatus = createAsyncThunk(
   "subTask/updateStatus",
   async ({ taskId, subtaskId, status }, { rejectWithValue }) => {
- console.log("Updating subtask status:", { taskId, subtaskId, status });
- 
-    
+    console.log("Updating subtask status:", { taskId, subtaskId, status });
+
     try {
       const res = await axiosInstance.put(
         `/subtask/updatesubtaskstatus/${taskId}/${subtaskId}`,
@@ -121,10 +123,7 @@ const subTaskSlice = createSlice({
       .addCase(fetchSubTasksByTaskId.fulfilled, (state, action) => {
         state.loading = false;
         const { taskId, subtasks } = action.payload;
-        state.subtasks = [
-          ...state.subtasks.filter((s) => s.taskId !== taskId),
-          ...subtasks,
-        ];
+        state.subtasks = subtasks; 
       })
       .addCase(fetchSubTasksByTaskId.rejected, (state, action) => {
         state.loading = false;
@@ -169,7 +168,9 @@ const subTaskSlice = createSlice({
       })
       .addCase(updateSubTask.fulfilled, (state, action) => {
         state.loading = false;
-        const idx = state.subtasks.findIndex((s) => s._id === action.payload._id);
+        const idx = state.subtasks.findIndex(
+          (s) => s._id === action.payload._id
+        );
         if (idx !== -1) state.subtasks[idx] = action.payload;
         if (state.currentSubTask?._id === action.payload._id) {
           state.currentSubTask = action.payload;
@@ -204,7 +205,9 @@ const subTaskSlice = createSlice({
       .addCase(updateSubTaskStatus.fulfilled, (state, action) => {
         state.loading = false;
         const updatedSubtask = action.payload;
-        const idx = state.subtasks.findIndex((s) => s._id === updatedSubtask._id);
+        const idx = state.subtasks.findIndex(
+          (s) => s._id === updatedSubtask._id
+        );
         if (idx !== -1) state.subtasks[idx] = updatedSubtask;
         if (state.currentSubTask?._id === updatedSubtask._id) {
           state.currentSubTask = updatedSubtask;

@@ -1111,7 +1111,7 @@ const CreateTaskModal = ({ projectId, project, onClose, isOpen })=>{
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                     onSubmit: handleSubmit,
-                    className: "grid grid-cols-1 md:grid-cols-[30%_70%] gap-6 p-6 h-[calc(100vh-100px)] overflow-y-auto",
+                    className: " grid grid-cols-1 md:grid-cols-[30%_70%] gap-6 p-6 h-[calc(100vh-100px)] overflow-y-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "space-y-6",
@@ -1692,18 +1692,6 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
         projectId,
         employeeId
     ]);
-    // Choose tasks based on role and view mode
-    // let tasks = [];
-    // if (currentUser?.role === "cpc" || (isTeamLead && viewMode === "all")) {
-    //   // For cpc or team lead in "all" view, show all tasks for the project
-    //   tasks = tasksFromStore;
-    // } else if (viewMode === "my") {
-    //   // For "my" view, show only tasks for the logged-in employee
-    //   tasks = employeeProjectTasks || [];
-    // } else {
-    //   // Default: show tasksFromStore for other cases
-    //   tasks = tasksFromStore;
-    // }
     const tasks = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         if (currentUser?.role === "cpc" || isTeamLead && viewMode === "all") {
             return tasksFromStore;
@@ -1884,12 +1872,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
             className: "flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] bg-white",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$loader$2f$Spinner$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                lineNumber: 311,
+                lineNumber: 299,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-            lineNumber: 310,
+            lineNumber: 298,
             columnNumber: 7
         }, this);
     }
@@ -1910,7 +1898,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                     className: "w-full bg-white border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 rounded-lg text-black text-sm sm:text-base"
                                 }, void 0, false, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 322,
+                                    lineNumber: 310,
                                     columnNumber: 13
                                 }, this),
                                 isTeamLead && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1923,12 +1911,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 placeholder: "View Mode"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 331,
+                                                lineNumber: 319,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 330,
+                                            lineNumber: 318,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1939,7 +1927,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     children: "My Tasks"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 334,
+                                                    lineNumber: 322,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1947,25 +1935,25 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     children: "All Tasks"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 335,
+                                                    lineNumber: 323,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 333,
+                                            lineNumber: 321,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 329,
+                                    lineNumber: 317,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                            lineNumber: 321,
+                            lineNumber: 309,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1985,7 +1973,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 349,
+                                                        lineNumber: 337,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1993,18 +1981,18 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "Filter"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 350,
+                                                        lineNumber: 338,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 343,
+                                                lineNumber: 331,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 342,
+                                            lineNumber: 330,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -2012,13 +2000,13 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                             children: "Open filter options"
                                         }, void 0, false, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 353,
+                                            lineNumber: 341,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 341,
+                                    lineNumber: 329,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -2035,7 +2023,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 363,
+                                                        lineNumber: 351,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2043,18 +2031,18 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "Reset"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 364,
+                                                        lineNumber: 352,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 357,
+                                                lineNumber: 345,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 356,
+                                            lineNumber: 344,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -2062,13 +2050,13 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                             children: "Reset all filters"
                                         }, void 0, false, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 367,
+                                            lineNumber: 355,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 355,
+                                    lineNumber: 343,
                                     columnNumber: 13
                                 }, this),
                                 (currentUser?.role === "cpc" || isTeamLead) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -2087,7 +2075,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                lineNumber: 379,
+                                                                lineNumber: 367,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2095,18 +2083,18 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                 children: "Download"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                lineNumber: 380,
+                                                                lineNumber: 368,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 373,
+                                                        lineNumber: 361,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 372,
+                                                    lineNumber: 360,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -2114,13 +2102,13 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     children: "Download report"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 383,
+                                                    lineNumber: 371,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 371,
+                                            lineNumber: 359,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -2137,7 +2125,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                lineNumber: 393,
+                                                                lineNumber: 381,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2145,18 +2133,18 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                 children: "Create Task"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                lineNumber: 394,
+                                                                lineNumber: 382,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 387,
+                                                        lineNumber: 375,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 386,
+                                                    lineNumber: 374,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -2164,13 +2152,13 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     children: "Create new task"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 397,
+                                                    lineNumber: 385,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 385,
+                                            lineNumber: 373,
                                             columnNumber: 17
                                         }, this)
                                     ]
@@ -2178,13 +2166,13 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                            lineNumber: 340,
+                            lineNumber: 328,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                    lineNumber: 320,
+                    lineNumber: 308,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -2198,12 +2186,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                     children: "Filter Tasks"
                                 }, void 0, false, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 408,
+                                    lineNumber: 396,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                lineNumber: 407,
+                                lineNumber: 395,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2219,12 +2207,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     placeholder: "Priority"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 413,
+                                                    lineNumber: 401,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 412,
+                                                lineNumber: 400,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -2235,7 +2223,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "All Priorities"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 416,
+                                                        lineNumber: 404,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2243,7 +2231,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "Low"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 417,
+                                                        lineNumber: 405,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2251,7 +2239,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "Medium"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 418,
+                                                        lineNumber: 406,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2259,19 +2247,19 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "High"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 419,
+                                                        lineNumber: 407,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 415,
+                                                lineNumber: 403,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 411,
+                                        lineNumber: 399,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -2284,12 +2272,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     placeholder: "Status"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 424,
+                                                    lineNumber: 412,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 423,
+                                                lineNumber: 411,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -2300,7 +2288,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "All Statuses"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 427,
+                                                        lineNumber: 415,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2308,7 +2296,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "Pending"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 428,
+                                                        lineNumber: 416,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2316,7 +2304,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "In Progress"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 429,
+                                                        lineNumber: 417,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2324,19 +2312,19 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "Completed"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 430,
+                                                        lineNumber: 418,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 426,
+                                                lineNumber: 414,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 422,
+                                        lineNumber: 410,
                                         columnNumber: 15
                                     }, this),
                                     showAssignedFilter && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -2349,12 +2337,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     placeholder: "Assigned To"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 438,
+                                                    lineNumber: 426,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 437,
+                                                lineNumber: 425,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -2365,7 +2353,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                         children: "All Assigned"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                        lineNumber: 441,
+                                                        lineNumber: 429,
                                                         columnNumber: 19
                                                     }, this),
                                                     assignedMembers.map((name)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -2373,19 +2361,19 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                             children: name
                                                         }, name, false, {
                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                            lineNumber: 443,
+                                                            lineNumber: 431,
                                                             columnNumber: 21
                                                         }, this))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 440,
+                                                lineNumber: 428,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 436,
+                                        lineNumber: 424,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$popover$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Popover"], {
@@ -2400,25 +2388,25 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                             children: "From Date"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                            lineNumber: 463,
+                                                            lineNumber: 451,
                                                             columnNumber: 67
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CalendarIcon$3e$__["CalendarIcon"], {
                                                             className: "ml-2 h-4 w-4 text-black"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                            lineNumber: 464,
+                                                            lineNumber: 452,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 456,
+                                                    lineNumber: 444,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 455,
+                                                lineNumber: 443,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$popover$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PopoverContent"], {
@@ -2431,18 +2419,18 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     className: "rounded-lg text-black"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 468,
+                                                    lineNumber: 456,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 467,
+                                                lineNumber: 455,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 454,
+                                        lineNumber: 442,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$popover$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Popover"], {
@@ -2457,25 +2445,25 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                             children: "To Date"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                            lineNumber: 486,
+                                                            lineNumber: 474,
                                                             columnNumber: 63
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CalendarIcon$3e$__["CalendarIcon"], {
                                                             className: "ml-2 h-4 w-4 text-black"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                            lineNumber: 487,
+                                                            lineNumber: 475,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 479,
+                                                    lineNumber: 467,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 478,
+                                                lineNumber: 466,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$popover$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PopoverContent"], {
@@ -2488,18 +2476,18 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     className: "rounded-lg text-black"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 491,
+                                                    lineNumber: 479,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 490,
+                                                lineNumber: 478,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 477,
+                                        lineNumber: 465,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2508,24 +2496,24 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                         children: "Apply Filters"
                                     }, void 0, false, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 500,
+                                        lineNumber: 488,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                lineNumber: 410,
+                                lineNumber: 398,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                        lineNumber: 406,
+                        lineNumber: 394,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                    lineNumber: 405,
+                    lineNumber: 393,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2577,17 +2565,17 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                             ]
                                         }, i, true, {
                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                            lineNumber: 525,
+                                            lineNumber: 513,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 514,
+                                    lineNumber: 502,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                lineNumber: 513,
+                                lineNumber: 501,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableBody"], {
@@ -2598,12 +2586,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                         children: "No tasks found"
                                     }, void 0, false, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 539,
+                                        lineNumber: 527,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 538,
+                                    lineNumber: 526,
                                     columnNumber: 17
                                 }, this) : paginatedTasks.map((task, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableRow"], {
                                         className: "hover:bg-gray-50",
@@ -2613,7 +2601,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 children: (currentPage - 1) * tasksPerPage + index + 1
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 546,
+                                                lineNumber: 534,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -2621,7 +2609,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 children: task.task_id
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 547,
+                                                lineNumber: 535,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -2629,7 +2617,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 children: task.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 548,
+                                                lineNumber: 536,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -2637,7 +2625,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 children: task?.assignedToDetails?.memberName || "N/A"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 549,
+                                                lineNumber: 537,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -2647,12 +2635,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     children: task.priority || "N/A"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 553,
+                                                    lineNumber: 541,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 552,
+                                                lineNumber: 540,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -2660,7 +2648,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$formatDate$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatDateUTC"])(task.deadline) || "N/A"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 564,
+                                                lineNumber: 552,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -2670,12 +2658,12 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     children: task.status || "N/A"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 568,
+                                                    lineNumber: 556,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 567,
+                                                lineNumber: 555,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -2696,17 +2684,17 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                             className: "h-4 w-4"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                            lineNumber: 589,
+                                                                            lineNumber: 577,
                                                                             columnNumber: 31
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                        lineNumber: 583,
+                                                                        lineNumber: 571,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                    lineNumber: 582,
+                                                                    lineNumber: 570,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -2714,13 +2702,13 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                     children: "View Task"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                    lineNumber: 592,
+                                                                    lineNumber: 580,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                            lineNumber: 581,
+                                                            lineNumber: 569,
                                                             columnNumber: 25
                                                         }, this),
                                                         (currentUser?.role === "cpc" || isTeamLead) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -2738,17 +2726,17 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                                     className: "h-4 w-4"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                                    lineNumber: 604,
+                                                                                    lineNumber: 592,
                                                                                     columnNumber: 35
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                                lineNumber: 598,
+                                                                                lineNumber: 586,
                                                                                 columnNumber: 33
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                            lineNumber: 597,
+                                                                            lineNumber: 585,
                                                                             columnNumber: 31
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -2756,13 +2744,13 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                             children: "Edit Task"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                            lineNumber: 607,
+                                                                            lineNumber: 595,
                                                                             columnNumber: 31
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                    lineNumber: 596,
+                                                                    lineNumber: 584,
                                                                     columnNumber: 29
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -2778,17 +2766,17 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                                     className: "h-4 w-4"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                                    lineNumber: 617,
+                                                                                    lineNumber: 605,
                                                                                     columnNumber: 35
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                                lineNumber: 611,
+                                                                                lineNumber: 599,
                                                                                 columnNumber: 33
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                            lineNumber: 610,
+                                                                            lineNumber: 598,
                                                                             columnNumber: 31
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tooltip$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -2796,13 +2784,13 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                                             children: "Delete Task"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                            lineNumber: 620,
+                                                                            lineNumber: 608,
                                                                             columnNumber: 31
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                                    lineNumber: 609,
+                                                                    lineNumber: 597,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             ]
@@ -2810,34 +2798,34 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 580,
+                                                    lineNumber: 568,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 579,
+                                                lineNumber: 567,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, task._id, true, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 545,
+                                        lineNumber: 533,
                                         columnNumber: 19
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                lineNumber: 536,
+                                lineNumber: 524,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                        lineNumber: 512,
+                        lineNumber: 500,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                    lineNumber: 511,
+                    lineNumber: 499,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2856,7 +2844,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                            lineNumber: 635,
+                            lineNumber: 623,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2871,7 +2859,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                     children: "Previous"
                                 }, void 0, false, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 640,
+                                    lineNumber: 628,
                                     columnNumber: 13
                                 }, this),
                                 getPaginationButtons().map((page)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2882,7 +2870,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                         children: page
                                     }, page, false, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 650,
+                                        lineNumber: 638,
                                         columnNumber: 15
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2894,19 +2882,19 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                     children: "Next"
                                 }, void 0, false, {
                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                    lineNumber: 666,
+                                    lineNumber: 654,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                            lineNumber: 639,
+                            lineNumber: 627,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                    lineNumber: 634,
+                    lineNumber: 622,
                     columnNumber: 9
                 }, this),
                 showDeleteModal && (currentUser?.role === "cpc" || isTeamLead) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -2916,7 +2904,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                             onClick: closeDeleteModal
                         }, void 0, false, {
                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                            lineNumber: 681,
+                            lineNumber: 669,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2932,7 +2920,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 children: "Confirm Deletion"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 685,
+                                                lineNumber: 673,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2944,18 +2932,18 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                     className: "h-4 w-4 sm:h-5 sm:w-5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                    lineNumber: 692,
+                                                    lineNumber: 680,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 686,
+                                                lineNumber: 674,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 684,
+                                        lineNumber: 672,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2963,7 +2951,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                         children: "Are you sure you want to delete this task? This action cannot be undone."
                                     }, void 0, false, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 695,
+                                        lineNumber: 683,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2976,7 +2964,7 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 699,
+                                                lineNumber: 687,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2986,24 +2974,24 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                                                 children: "Delete"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                                lineNumber: 706,
+                                                lineNumber: 694,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                        lineNumber: 698,
+                                        lineNumber: 686,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                                lineNumber: 683,
+                                lineNumber: 671,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                            lineNumber: 682,
+                            lineNumber: 670,
                             columnNumber: 13
                         }, this)
                     ]
@@ -3015,18 +3003,18 @@ const AllTaskListByProjectId = ({ projectId, project })=>{
                     onClose: ()=>setShowCreateTaskModal(false)
                 }, void 0, false, {
                     fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-                    lineNumber: 721,
+                    lineNumber: 709,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-            lineNumber: 318,
+            lineNumber: 306,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/modules/Tasks/task/AllTaskListByProjectId.jsx",
-        lineNumber: 317,
+        lineNumber: 305,
         columnNumber: 5
     }, this);
 };
