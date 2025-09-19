@@ -1,2 +1,2 @@
-# blueprintfro-v1
-blueprintfro-v1   will updated soon
+# blueprintfro-v0
+blueprintfro-v0   will updated soon
